@@ -1,4 +1,4 @@
-def call(params, actions) {
+def call(actions) {
     def pipelineParams = [:]
     actions.resolveStrategy = Closure.DELEGATE_FIRST
     actions.delegate = pipelineParams
