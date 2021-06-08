@@ -1,4 +1,5 @@
 def call(body) {
+    // https://stackoverflow.com/questions/46573413/why-does-the-jenkinsfile-use-a-closure-in-this-way
     def pipelineParams= [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = pipelineParams

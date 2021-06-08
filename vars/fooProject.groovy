@@ -1,8 +1,8 @@
-def call(body) {
+def call(params, actions) {
     def pipelineParams = [:]
-    body.resolveStrategy = Closure.DELEGATE_FIRST
-    body.delegate = pipelineParams
-    body()
+    actions.resolveStrategy = Closure.DELEGATE_FIRST
+    actions.delegate = pipelineParams
+    actions()
 
     println(pipelineParams)
 }
